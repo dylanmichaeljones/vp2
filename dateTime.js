@@ -64,7 +64,6 @@ const timeFormattedEt = function(){
 		dPart = "Tuduaeg, ilusaid unenägusid!";
 }
 return dPart;
-}
 
 
 console.log(partOfDay());
