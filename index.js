@@ -80,7 +80,8 @@ app.post("/regvisit", (req, res)=>{
 });
 
 app.get("/regvisitdb", (req, res)=>{
-	res.render("regvisitdb");
+	//res.render("regvisitdb");
+	let notice = "";
 	let firstName = "";
 	let lastName = "";
 	res.render("regvisitdb", {notice: notice, firstName: firstName, lastName: lastName});
