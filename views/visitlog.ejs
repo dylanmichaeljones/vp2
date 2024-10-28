@@ -9,14 +9,16 @@
   <h1>Dylan Jones</h1>
   <p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a> ja ei sisalda tõsiseltvõetavat materjali!</p>
   <hr>
-  <h2>Eesti film</h2>
   <ul>
-	<li><a href="/">Avalehele</a></li>
-	<li><a href="/eestifilm/tegelased">Eesti filmitegelased</a></li>
-	<li><a href="/eestifilm/filmid">Eesti filmid</a></li>
+  <li><a href="/">Avalehele</a></li>
   </ul>
   <hr>
-  
-  
+  <h2><%= h2 %></h2>
+  <p>Registreeritud külastused</p>
+  <ol>
+	<% listData.forEach(function(phrase){ %>
+	   <li><%= phrase %></li>
+	   <% }); %>
+  </ol>
 </body>
 </html>
