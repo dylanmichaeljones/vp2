@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Dylan Jones</title>
+  <link rel="stylesheet" href="/style/gallery.css">
+  <link rel="stylesheet" href="/style/modal.css">
+  <script src="/script/gallery.js" defer></script>
 </head>
 <body>
   <img src="/banner/vp_banner_2024.png" alt="Veebiprogrammeerimise 2024 aasta kursuse bänner">
@@ -10,14 +13,23 @@
   <p>See leht on loodud õppetöö raames <a href="https://www.tlu.ee">Tallinna ülikoolis</a> ja ei sisalda tõsiseltvõetavat materjali!</p>
   <hr>
   <ul>
-  <li><a href="/">Avalehele</a></li>
+  <li><a href="/home">Avalehele</a></li>
   </ul>
   <hr>
+  <dialog id+"modal" class="modalarea">
+	<span id="modalClose" class="modalclose">&times;</span>
+	<div class="modalhorizontal">
+		<div class="modalvertical">
+			<p id="modalCaption"</p>
+			<img id="modalImage" src="/pics/empty.png" alt="galeriipilt">
+		</div>
+	</div>
+  </dialog>
   <h2>Galerii</h2>
-  <li>
+  <div class="gallery">
     <% listData.forEach(function(photo){ %>
-	   <li><%= photo.file_name %> <%= photo.alt_text %></li>
+	   <img src="<%= photo.href %><%= photo.filename %>" alt="<%= photo.alt %>" data-filename="<%= photo.filename %>" data.id="<%= photo.id%>" class="thumbs">
 	   <% }); %>
-  </li>
-  </body>
+  <div>
+</body>
 </html>
